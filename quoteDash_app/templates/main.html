@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Login Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
+    <link rel="stylesheet" href="{% static 'main_styles.css' %}">
+    <script src="{% static 'main_script.js' %}"></script>
+</head>
+<body>
+    <div id="container">
+        
+        {% if messages %}
+        <div id='errors' data-simplebar>
+            {% for message in messages %}
+                <p>!! {{message}} !!</p>
+            {% endfor %}
+        </div>
+        {% endif %}
+        
+        <div class="register">
+            <h1>Register</h1>
+            <form action="/register" method="POST">
+                {% csrf_token %}
+                First Name: <input type="text" name='f_name'>
+                Last Name: <input type="text" name='l_name'>
+                Email: <input type="text" name='email'>
+                Password: <input type="password" name='pass'>
+                Confirm Password: <input type="password" name='con_pass'>
+                <input id="rbutton" type="submit" value="Register"> 
+            </form>
+        </div>
+
+        <div class="login">
+            <h1>Log In</h1>
+            <form action="/login" method="POST">
+                {% csrf_token %}
+                Email: <input type="text" name='email'>
+                Password: <input type="password" name='pass'>
+                <input id="lbutton" type="submit" value="Login"> 
+            </form>
+        </div>
+        
+    </div>
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+</body>
+</html>

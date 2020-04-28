@@ -1,0 +1,53 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Account</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'eProfile_styles.css' %}">
+    
+</head>
+<body>
+    <div id="container">
+        <a class="back" href="/back">Back</a>
+        
+        <h1>Welcome {{user.first_name}} {{user.last_name}}</h1>
+        <h3>Update your Account Info:</h3>
+
+        <div class="edit">
+
+            <form action="/edit" method="POST">
+                {% csrf_token %}
+                First Name: <input type="text" name='f_name' placeholder="First Name">
+                Last Name: <input type="text" name='l_name' placeholder="Last Name">
+                Email: <input type="text" name='email' placeholder="Email">
+                <input id="button" type="submit" value="Update">
+            </form>
+
+            <!-- <form action="/edit/{{User.id}}" method="POST">
+                {% csrf_token %}
+                First Name: <input type="text" name='f_name' placeholder={{user.first_name}}>
+                Last Name: <input type="text" name='l_name' placeholder={{user.last_name}}>
+                Email: <input type="text" name='email' placeholder={{user.email}}>
+                <input id="button" type="submit" value="Update">
+            </form> -->
+
+            <!-- {% if messages %}
+            <div id='errors' data-simplebar>
+                {% for message in messages %}
+                    <p>!! {{message}} !!</p>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+        </div>
+
+        <form  action="/Logout" method="POST">
+            {% csrf_token %}
+            <input id="logout" type="submit" value="Logout">
+        </form>
+
+    </div>
+</body>
+</html> --> 

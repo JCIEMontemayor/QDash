@@ -1,0 +1,57 @@
+#container{
+    width: 550px;
+    min-height: 535px;
+    background-color: burlywood;
+    margin: 0px auto;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#container h1, h3{
+    text-align: center;
+}
+
+.back{
+    display: block;
+    position: absolute;
+    margin-left: 515px;
+}
+
+.edit{
+    display: inline-block;
+    background-color: cadetblue;
+    width: 450px;
+    height: 325px;
+    margin: 0px 48px;
+    border: 2px solid black;    
+}
+
+.edit form{
+    margin: 15px;
+    text-align: center;
+}
+.edit input{
+    display: block;
+    margin: 5px auto;
+    height: 20px;
+    width: 200px;
+    border: 1px solid black;
+}
+
+#button{
+    display: block;
+    height: 30px;
+    width: 100px;
+    margin-top: 60px;
+    border-radius: 5px;
+}
+
+#logout{
+    display: block;
+    width: 65px;
+    height: 25px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: cornflowerblue;
+    margin: 30px auto;
+}

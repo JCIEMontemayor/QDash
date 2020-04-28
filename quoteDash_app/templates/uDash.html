@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashbord</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
+    <link rel="stylesheet" href="{% static 'uDash_styles.css' %}">
+    <script src="{% static 'uDash_script.js' %}"></script>
+</head>
+
+<body>
+    <div id="container">
+
+        <div>
+            <h2>Welcome {{request.session.user}}!</h2>
+            <a class="edit" href="/goto_edit">Edit My Account</a>
+            <form  action="/Logout" method="POST">
+                {% csrf_token %}
+                <input id="logout" type="submit" value="Logout">
+            </form>
+        </div>
+
+        <div class="quotes" data-simplebar>
+            <h1>Quotes</h1>
+
+            {% for quote in my_quotes %}
+            <div class="one_quote">
+                <p>"{{quote.quote}}"</p>
+                <p>Posted By: <a href="/my_quotes/{{quote.author.id}}">{{quote.author.first_name}} {{quote.author.last_name}}</a></p>
+                <a href="/like/{{quote.id}}">Like this Quote</a>
+                <p>{{ quote.user_likes.count}}</p>
+   
+                <a id="delete" href="/delete/{{quote.id}}">Delete</a>
+            
+
+            </div>
+            {% endfor %}
+        </div>
+
+        {% if messages %}
+        <div id='errors' data-simplebar>
+            {% for message in messages %}
+                <p>!! {{message}} !!</p>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="add">
+            <h1>Add a Quote</h1>
+            <form action="/Quote" method="POST">
+                {% csrf_token %}
+                Quote Author: <input type="text" name="q_auth">
+                Quote Description: <input id="desc" type="text" name="q_desc">
+                <input id="submitB" type="submit" value="Add Quote">
+            </form>
+        </div>
+
+    </div>
+
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+    
+</body>
+</html>

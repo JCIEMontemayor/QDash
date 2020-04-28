@@ -1,0 +1,90 @@
+#container{
+    width: 900px;
+    min-height: 600px;
+    background-color: grey;
+    margin: 0px auto;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.register{
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    margin: 21px;
+    margin-top: 25px;
+    background-color: cornflowerblue;
+    vertical-align: top;
+    border: 2px solid black;
+}
+
+.register h1{
+    text-align: center;
+}
+
+.register form{
+    margin: 15px;
+    text-align: center;
+}
+
+
+.register input{
+    display: block;
+    margin: 5px auto;
+    height: 20px;
+    width: 200px;
+    border: 1px solid black;
+}
+
+#rbutton{
+    display: block;
+    height: 30px;
+    width: 100px;
+    margin-top: 40px;
+    border-radius: 5px;
+
+}
+
+.login{
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    margin: 21px;
+    margin-top: 25px;
+    background-color: cornflowerblue;
+    vertical-align: top;
+    border: 2px solid black;
+}
+
+.login h1{
+    text-align: center;
+}
+
+.login form{
+    margin: 15px;
+    text-align: center;
+}
+.login input{
+    display: block;
+    margin: 5px auto;
+    height: 20px;
+    width: 200px;
+    border: 1px solid black;
+}
+
+#lbutton{
+    display: block;
+    height: 30px;
+    width: 100px;
+    margin-top: 40px;
+    border-radius: 5px;
+}
+
+#errors{
+    width: 800px;
+    height: 50px;
+    margin: 0px auto;
+    padding: 5px;
+    background-color: red;
+    border: 2px solid black;
+}

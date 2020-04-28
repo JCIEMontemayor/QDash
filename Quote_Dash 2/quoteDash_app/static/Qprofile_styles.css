@@ -1,0 +1,50 @@
+#container{
+    width: 550px;
+    min-height: 550px;
+    background-color: burlywood;
+    margin: 0px auto;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#container h1{
+    text-align: center;
+}
+
+.edit{
+    display: block;
+    position: absolute;
+    margin-left: 515px;
+}
+
+#quotes{
+    display: inline-block;
+    background-color: cadetblue;
+    width: 450px;
+    height: 425px;
+    margin: 0px 48px;
+    border: 2px solid black;    
+}
+
+#quotes h2{
+    text-align: center;
+}
+
+.one_quote{
+    background-color: teal;
+    padding: 25px;
+    margin: 25px;
+    min-height: 275px;
+    border: 2px solid black;
+}
+
+#logout{
+    display: block;
+    width: 65px;
+    height: 25px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: cornflowerblue;
+    margin: 15px auto;
+}
+

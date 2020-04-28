@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User's Quote Profile</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
+    <link rel="stylesheet" href="{% static 'Qprofile_styles.css' %}">
+    <script src="{% static 'Qprofile_script.js' %}"></script>
+</head>
+<body>
+    <div id="container">
+
+        <a class="edit" href="/back">Back</a>
+
+        <h1>Welcome to {{user.last_name}}'s Page!</h1>
+            
+        <div id="quotes" data-simplebar>
+            <h2>Quotes</h2>
+
+            <div class="one_quote" >
+                {% for quote in author.user_quote.all %}
+                <p>"{{quote.quote}}"</p>
+                {% endfor %}
+            </div>
+        </div>
+    
+        <form  action="/Logout" method="POST">
+            {% csrf_token %}
+            <input id="logout" type="submit" value="Logout">
+        </form>
+
+    </div>
+
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+</body>
+</html>
